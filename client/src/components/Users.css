@@ -1,0 +1,21 @@
+.users h2 {
+  margin-bottom: 1rem;
+}
+
+.user {
+  margin-block: 2rem;
+}
+
+.user-icon {
+  background-color: var(--clr-primary-dark);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  padding: 4px;
+}
+
+.xp {
+  margin-right: 5px;
+  font-size: 90%;
+  vertical-align: middle;
+}
