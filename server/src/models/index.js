@@ -6,7 +6,6 @@ const { Attack } = require("./Attack");
 
 // set up the associations here
 
-
 // Users and Decks one-to-one 
 
 User.hasOne(Deck);
