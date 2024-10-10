@@ -8,4 +8,4 @@ let Card = db.define("Card", {
   imgUrl: { type: DataTypes.STRING },
 });
 
-module.exports = Card;
+module.exports = {Card};

@@ -6,4 +6,4 @@ let User = db.define("User", {
   username: { type: DataTypes.STRING },
 });
 
-module.exports = User;
+module.exports = {User};

@@ -7,4 +7,4 @@ let Attack = db.define("Attack", {
   staminaCost: { type: DataTypes.INTEGER },
 });
 
-module.exports = Attack;
+module.exports = {Attack};

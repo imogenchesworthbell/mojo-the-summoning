@@ -6,4 +6,4 @@ let Deck = db.define("Deck", {
   xp: { type: DataTypes.INTEGER },
 });
 
-module.exports = Deck;
+module.exports = { Deck };
