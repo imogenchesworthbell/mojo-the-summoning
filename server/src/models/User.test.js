@@ -18,16 +18,15 @@ describe('User', () => {
   it('has an id set correctly', async () => {
     expect(user).toHaveProperty('id')
   }),
-
-  /**
-   * Create more tests
-   * E.g. check that the username of the created user is actually gandalf
-   */ 
+  
+  it('has an username set correctly', async () => {
+    expect(user).toHaveProperty('username')
+  }),
 
   it('has a username set correctly', async () => {
     expect(user.username).toBe('gandalf')
   })
-
+// correct data types
   // STRETCH - addd test - a user can be loaded with deck
 
 })

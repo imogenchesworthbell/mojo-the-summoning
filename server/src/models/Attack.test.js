@@ -17,13 +17,13 @@ afterAll(async () => await db.sync({ force: true }))
 describe('Attack', () => {
     it('has an id set correctly', async () => {
         expect(attack).toHaveProperty('id')
-      })
+      }),
       it('has a username set correctly', async () => {
         expect(attack.title).toBe('gandalf-attack')
-      })
+      }),
       it('has a username set correctly', async () => {
         expect(attack.mojoCost).toBe(12)
-      })
+      }),
       it('has a username set correctly', async () => {
         expect(attack.staminaCost).toBe(1)
       })
