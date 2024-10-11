@@ -1,7 +1,7 @@
 const { describe, it, expect, beforeAll, afterAll } = require('@jest/globals')
 const { User } = require('./User')
+const { Deck } = require('./Deck')
 const {db} = require('../db/config')
-const { STRING } = require('sequelize')
 
 // define in global scope
 let user
@@ -31,7 +31,22 @@ describe('User', () => {
     expect(typeof user.id).toBe('number');
     expect(typeof user.username).toBe('string')
   })
+});
 
-  // STRETCH - addd test - a user can be loaded with deck
+describe('User - Stretch', () => {
+  // STRETCH - add test - a user can be loaded with deck one to one
 
+  User.hasOne(Deck);
+  Deck.belongsTo(User);
+
+  it('user can be loaded with deck', async () => {
+    const testUser = await User.create({ username: 'Immie123' });
+    const testDeck = await Deck.create({ name: 'Imogen', xp: 100 });
+    await testUser.setDeck(testDeck);
+
+    const userDeck = await testUser.getDeck();
+    expect(userDeck.name).toBe('Imogen');
+    expect(userDeck.xp).toBe(100);
 })
+
+});
