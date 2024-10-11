@@ -29,7 +29,14 @@ describe('Attack', () => {
     })
     it('has an imaeurl set correctly', async () => {
         expect(card.imgUrl).toBe('https://picsum.photos/200')
-    })
+    }),
+    it('has the correct types of data', async () => {
+        expect(typeof card.id).toBe('number')
+        expect(typeof card.name).toBe('string');
+        expect(typeof card.mojo).toBe('number');
+        expect(typeof card.stamina).toBe('number');
+        expect(typeof card.imgUrl).toBe('string')
+      })
 
     // STRETCH - addd test - cards can be loaded with attacks
 

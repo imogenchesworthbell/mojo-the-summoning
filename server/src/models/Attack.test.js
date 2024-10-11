@@ -18,13 +18,20 @@ describe('Attack', () => {
         expect(attack).toHaveProperty('id')
       }),
       it('has a username set correctly', async () => {
-        expect(attack.title).toBe('gandalf-attack')
+        expect(attack.title).toBe('gandalf-attack');
       }),
       it('has a username set correctly', async () => {
-        expect(attack.mojoCost).toBe(12)
+        expect(attack.mojoCost).toBe(12);
       }),
       it('has a username set correctly', async () => {
-        expect(attack.staminaCost).toBe(1)
+        expect(attack.staminaCost).toBe(1);
+      }),
+      it('has the correct types of data', async () => {
+        expect(typeof attack.id).toBe('number')
+        expect(typeof attack.title).toBe('string');
+        expect(typeof attack.mojoCost).toBe('number');
+        expect(typeof attack.staminaCost).toBe('number')
       })
+      
 
 })
