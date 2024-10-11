@@ -7,7 +7,6 @@ let attack
 
 // clear db and create new user before tests
 beforeAll(async () => {
-  await db.sync({ force: true })
   attack = await Attack.create({ title: 'gandalf-attack', mojoCost: 12, staminaCost: 1 })
 })
 

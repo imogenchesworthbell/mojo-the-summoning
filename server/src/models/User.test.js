@@ -1,6 +1,7 @@
 const { describe, it, expect, beforeAll, afterAll } = require('@jest/globals')
 const { User } = require('./User')
 const {db} = require('../db/config')
+const { STRING } = require('sequelize')
 
 // define in global scope
 let user
@@ -20,13 +21,14 @@ describe('User', () => {
   }),
   
   it('has an username set correctly', async () => {
-    expect(user).toHaveProperty('username')
+    expect(user).toHaveProperty('username');
+    expect(typeof user.username).toBe('string')
   }),
 
   it('has a username set correctly', async () => {
     expect(user.username).toBe('gandalf')
   })
-// correct data types
+
   // STRETCH - addd test - a user can be loaded with deck
 
 })
