@@ -21,6 +21,13 @@ Card.belongsTo(Deck);
  Card.belongsToMany(Attack, {through: "card-attack"});
  Attack.belongsToMany(Card, {through: "card-attack"});
 
+/* (from associations check box on multiverse) 
+Write another test(s) that verify one or more of these:
+- A User can be loaded with its Deck
+- A Deck can be loaded with its Cards
+- Cards can be loaded with its Attacks
+*/
+
 
 
 // and then export them all below
